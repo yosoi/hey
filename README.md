@@ -1,1 +1,5 @@
-A template page to host a Phaser game and some Adsense ads.
+## :hand: hey
+
+An anonymous chatroom game.
+
+[https://hey.yosoi.io/](https://hey.yosoi.io/)
