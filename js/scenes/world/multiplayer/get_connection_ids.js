@@ -4,10 +4,6 @@ export default function() {
   ).then(
     (response) => response.json()
   ).then((data) => {
-    const connections = data.body;
-
-    console.log(connections);
-
-    return JSON.parse(connections);
+    return JSON.parse(data.body);
   });
 }
