@@ -24,7 +24,7 @@ export default function(e, scene) {
   } else if (action === "poke") {
     console.log("poke");
     sayMessage(
-      scene.me,
+      player,
       "poke",
       scene
     );
