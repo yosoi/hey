@@ -23,6 +23,8 @@ class World extends Phaser.Scene {
   create() {
     this.otherPlayers = {};
     getConnections().then((connections) => {
+      console.log(connections);
+      console.log(Array.from(connections));
       if (connections && connections.length) {
         Array.from(connections).forEach((connection, i) => {
           createOther(
