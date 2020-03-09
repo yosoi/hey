@@ -9,8 +9,7 @@ export default function(e, scene) {
   const message = JSON.parse(e.data);
   const action = message.action;
   const player = findPlayer(message.connectionId, scene);
-  console.log("message from other player...");
-  console.log(player, action, message);
+  console.log(message);
   if (action === "exit") {
     delete scene.otherPlayers[message.connectionId];
     player.destroy();

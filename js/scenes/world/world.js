@@ -23,14 +23,16 @@ class World extends Phaser.Scene {
   create() {
     this.otherPlayers = {};
     getConnections().then((connections) => {
-      connections.forEach((connection, i) => {
-        createOther(
-          connection.connectionId,
-          this,
-          connection.x,
-          connection.y
-        );
-      });
+      if (connections && connections.length) {
+        Array.from(connections).forEach((connection, i) => {
+          createOther(
+            connection.connectionId,
+            this,
+            connection.x,
+            connection.y
+          );
+        });
+      }
     });
     this.me = createPlayer(
       (pointer, localX, localY, event, player, scene) => {

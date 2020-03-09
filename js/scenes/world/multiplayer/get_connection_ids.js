@@ -1,9 +1,9 @@
 export default function() {
   return fetch(
-    "https://3bghmn7i1g.execute-api.us-east-2.amazonaws.com/dev/"
+    "https://byqid7cw8h.execute-api.us-east-2.amazonaws.com/dev/players"
   ).then(
     (response) => response.json()
   ).then((data) => {
-    return data;
+    return data.body;
   });
 }
