@@ -1,4 +1,7 @@
 export default function(player, x, y, scene) {
+  x = Math.floor(x);
+  y = Math.floor(y);
+  console.log(x, y);
   const distanceX = Math.abs(player.x - x);
   const distanceY = Math.abs(player.y - y);
   const distance = Phaser.Math.Distance.Between(
