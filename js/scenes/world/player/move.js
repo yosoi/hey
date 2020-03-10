@@ -1,14 +1,13 @@
 export default function(player, x, y, scene) {
   x = Math.floor(x);
   y = Math.floor(y);
-  console.log(x, y);
   const distanceX = Math.abs(player.x - x);
   const distanceY = Math.abs(player.y - y);
   const distance = Phaser.Math.Distance.Between(
     player.x, player.y,
     x, y
   );
-  const pixelsPerSecond = 60;
+  const pixelsPerSecond = 128;
   const moveDuration = (distance / pixelsPerSecond) * 1000;
   let animKey = "";
   if (distanceX >= distanceY) {

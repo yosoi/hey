@@ -1,5 +1,13 @@
-import sayMessage from '../messages/say_message.js'
+import send from '../multiplayer/send.js'
+import showMenu from '../messages/menu/show.js'
 
 export default function(player, scene) {
-  sayMessage(player, "think", scene);
+  send(
+    scene.connection,
+    "speak",
+    {
+      message: "think"
+    }
+  )
+  showMenu(scene);
 }
