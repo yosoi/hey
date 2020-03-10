@@ -22,24 +22,17 @@ export default function(e, scene) {
       scene
     );
   } else if (action === "poke") {
-    console.log("poke");
     sayMessage(
       player,
       "poke",
       scene
     );
-  } else if (action === "say") {
-    // sayMessage(
-    //   player,
-    //   message.data.message,
-    //   scene
-    // );
-  } else if (action === "think") {
-    // sayMessage(
-    //   player,
-    //   "think",
-    //   scene
-    // );
+  } else if (action === "speak") {
+    sayMessage(
+      player,
+      message.data.message,
+      scene
+    );
   } else {
     console.log("something has gone horribly wrong");
   }
