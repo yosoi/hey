@@ -1,4 +1,5 @@
 import connect from './multiplayer/connect.js'
+import createMenu from './messages/menu/create.js'
 import createOther from './player/create_other.js'
 import createPlayer from './player/create.js'
 import getConnections from './multiplayer/get_connection_ids.js'
@@ -21,6 +22,7 @@ class World extends Phaser.Scene {
   }
 
   create() {
+    createMenu(this);
     this.otherPlayers = {};
     getConnections().then((connections) => {
       console.log(connections);

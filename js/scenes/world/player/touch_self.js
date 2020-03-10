@@ -1,5 +1,5 @@
 import send from '../multiplayer/send.js'
-import sayMessage from '../messages/say_message.js'
+import showMenu from '../messages/menu/show.js'
 
 export default function(player, scene) {
   send(
@@ -9,5 +9,5 @@ export default function(player, scene) {
       message: "think"
     }
   )
-  sayMessage(player, "think", scene);
+  showMenu(scene);
 }

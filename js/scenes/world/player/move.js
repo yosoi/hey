@@ -7,7 +7,7 @@ export default function(player, x, y, scene) {
     player.x, player.y,
     x, y
   );
-  const pixelsPerSecond = 60;
+  const pixelsPerSecond = 128;
   const moveDuration = (distance / pixelsPerSecond) * 1000;
   let animKey = "";
   if (distanceX >= distanceY) {
