@@ -7,7 +7,7 @@ export default function(scene) {
     0,
     800,
     600,
-    0xFFFF00
+    0x000000
   );
   background.setOrigin(0,0);
   background.setInteractive().on("pointerdown", function(pointer, localX, localY, event) {
