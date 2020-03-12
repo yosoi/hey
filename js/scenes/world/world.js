@@ -1,4 +1,5 @@
 import connect from './multiplayer/connect.js'
+import createMap from './map/create.js'
 import createMenu from './messages/menu/create.js'
 import createOther from './player/create_other.js'
 import createPlayer from './player/create.js'
@@ -22,6 +23,7 @@ class World extends Phaser.Scene {
   }
 
   create() {
+    createMap(this);
     createMenu(this);
     this.otherPlayers = {};
     getConnections().then((connections) => {
@@ -44,22 +46,22 @@ class World extends Phaser.Scene {
       },
       this
     );
-    this.input.on("pointerup", function(pointer) {
-      movePlayer(
-        this.me,
-        pointer.x,
-        pointer.y,
-        this
-      );
-      send(
-        this.connection,
-        "move",
-        {
-          x: pointer.x,
-          y: pointer.y
-        }
-      );
-    }, this);
+    // this.input.on("pointerup", function(pointer) {
+    //   movePlayer(
+    //     this.me,
+    //     pointer.x,
+    //     pointer.y,
+    //     this
+    //   );
+    //   send(
+    //     this.connection,
+    //     "move",
+    //     {
+    //       x: pointer.x,
+    //       y: pointer.y
+    //     }
+    //   );
+    // }, this);
     this.connection = connect(this);
   }
 }
