@@ -1,3 +1,4 @@
+import hide from '../messages/menu/hide.js'
 import movePlayer from '../player/move.js'
 import send from '../multiplayer/send.js'
 
@@ -11,6 +12,7 @@ export default function(scene) {
   );
   background.setOrigin(0,0);
   background.setInteractive().on("pointerdown", function(pointer, localX, localY, event) {
+    hide(scene);
     movePlayer(
       scene.me,
       pointer.x,
